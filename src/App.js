@@ -1,12 +1,23 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import { useState } from 'react';
+import SearchContext from './components/SearchContext';
 import Header from './components/Header';
+import Movies from './components/Movies';
 
 const App = () => {
+   const [search, setSearch] = useState('');
+   const [movies, setMovies] = useState([]);
+
    return (
       <div className='App'>
-         <Header />
+         <SearchContext.Provider value={{ search, setSearch, setMovies }}>
+            <Header />
+         </SearchContext.Provider>
+         <main>
+            <Movies movies={movies} />
+         </main>
       </div>
    );
 };
