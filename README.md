@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Times Say
+What does the Times say? This app retrieves movie reviews from the New York Times archives. The NYT Movie Reviews API is available here: https://developer.nytimes.com/docs/movie-reviews-api/1/overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*TODO: Add live site URL.*
 
-## Available Scripts
+## Technologies Used
+The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project will most likely be hosted on Heroku, or with Surge if it suits my needs better.
 
-In the project directory, you can run:
+Once again project management is handled with [Trello](https://trello.com/b/TrNxWlVZ/times-say).
 
-### `yarn start`
+## Timeframe
+*TODO: add timeframe table*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Schedule
+*TODO: add project schedule*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Stories
+* As a movie buff, I want an easy way to search for movie reviews from the NY Times
+* As a movie buff, I want quick details about a movie like opening year and rating
+* As a movie buff, I want to see quick snippets of a review before investing time in reading one
+* As a movie buff, I want an easy way to access the entire review if I'm interested
 
-### `yarn test`
+### MVP Goals
+* Successfully fetch review data based on search query
+* Render the review blurb in a visually compelling interface
+* Redirect to NYT website for the full review
+* Render critics picks: a list of favorites curated by NYT staff
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Stretch Goals
+* Integrate a movie poster API to fetch high quality artwork to go with the review blurbs and generate visual interest
+* Allow granular search options like release year and review author
+* Integrate NYT Books API for book reviews
 
-### `yarn build`
+## Wireframes
+> Landing page
+![landing page](https://i.imgur.com/6Odksw0.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Review
+![review page](https://i.imgur.com/4kS30cQ.png)
