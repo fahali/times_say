@@ -1,17 +1,29 @@
-import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import { capitalizeName, friendlyDate } from './Movie';
 
 const MovieDetails = ({ movie }) => {
    return (
-      <div>
-         <p>{movie.display_title}</p>
-         <p>{`Rated: ${movie.mpaa_rating}`}</p>
-         <p>{`Opening: ${movie.opening_date}`}</p>
-         <p>{movie.byline}</p>
-         <p>{`Published: ${movie.publication_date}`}</p>
-         <p>{movie.headline}</p>
-         <p>{movie.summary_short}</p>
-         <Link to={movie.link.url}>Read the rest on NYT</Link>
-      </div>
+      <Card bg='dark' border='primary' className='details-card'>
+         <Card.Header className='details-header'>
+            <h1>{movie.display_title}</h1>
+            <p>
+               {movie.opening_date && friendlyDate(movie.opening_date)}
+               {movie.mpaa_rating && ` | Rated ${movie.mpaa_rating}`}
+            </p>
+         </Card.Header>
+         <Card.Body className='details-body'>
+            <Card.Title>{movie.headline}</Card.Title>
+            <Card.Subtitle className='mb-2'>{`${capitalizeName(
+               movie.byline
+            )} | ${friendlyDate(movie.publication_date)}`}</Card.Subtitle>
+            <p>{movie.summary_short}</p>
+         </Card.Body>
+         <Card.Footer className='details-footer'>
+            <p>
+               Read the rest at <a href={movie.link.url}>The New York Times</a>
+            </p>
+         </Card.Footer>
+      </Card>
    );
 };
 

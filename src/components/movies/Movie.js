@@ -4,18 +4,17 @@ import Card from 'react-bootstrap/Card';
 import moment from 'moment';
 import MovieContext from './MovieContext';
 
+const capitalizeName = name =>
+   name
+      .split('')
+      .map(char => char.toUpperCase())
+      .join('');
+
+const friendlyDate = date => moment(date, 'YYYY-MM-DD').format('MMMM D, YYYY');
+
 const Movie = ({ movie }) => {
    const { setMovie } = useContext(MovieContext);
    const history = useHistory();
-
-   const capitalizeName = name =>
-      name
-         .split('')
-         .map(char => char.toUpperCase())
-         .join('');
-
-   const friendlyDate = date =>
-      moment(date, 'YYYY-MM-DD').format('MMMM D, YYYY');
 
    const handleClick = () => {
       setMovie(movie);
@@ -23,8 +22,12 @@ const Movie = ({ movie }) => {
    };
 
    return (
-      <Card bg='secondary' border='primary' onClick={handleClick}>
-         <Card.Header>
+      <Card
+         bg='dark'
+         border='primary'
+         className='movie-card'
+         onClick={handleClick}>
+         <Card.Header className='movie-header'>
             <small>{friendlyDate(movie.publication_date)}</small>
          </Card.Header>
          <Card.Body>
@@ -42,3 +45,4 @@ const Movie = ({ movie }) => {
 };
 
 export default Movie;
+export { capitalizeName, friendlyDate };

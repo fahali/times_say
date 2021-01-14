@@ -1,3 +1,7 @@
+.card-body * {
+   font-family: 'nyt-imperial', serif;
+}
+
 .movies-container {
    margin-top: 1rem;
    display: flex;
@@ -5,19 +9,56 @@
    justify-content: center;
 }
 
-.card {
+.movie-card {
    width: 212px;
    margin: 1rem;
 }
 
-.card-body * {
-   font-family: 'nyt-imperial', serif;
-}
-
-.card-header {
+.movie-header {
    text-align: right;
 }
 
-small {
+.movie-header small {
    font-family: 'nyt-franklin', sans-serif;
+}
+
+.details-card {
+   width: 75%;
+   margin-top: 2rem;
+}
+
+.details-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.details-header h1 {
+   font-size: 4rem;
+   margin: 0;
+}
+
+.details-header p {
+   font-family: 'nyt-franklin', sans-serif;
+   font-size: 1.2rem;
+   margin: 0;
+}
+
+.details-body .card-title {
+   font-size: 2rem;
+}
+
+.details-body .card-subtitle {
+   font-size: 1.2rem;
+}
+
+.details-body p {
+   font-size: 1.4rem;
+   margin-top: 4rem;
+}
+
+.details-footer * {
+   font-family: 'Inconsalata', sans-serif;
+   font-weight: 200;
+   margin: 0;
 }

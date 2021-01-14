@@ -4,13 +4,15 @@ header {
    align-items: center;
 }
 
-h1 {
-   font-family: 'nyt-cheltenham', serif;
+header h1 {
    margin-top: 4rem;
    margin-bottom: 2rem;
 }
 
-input,
-button {
+input {
    font-family: 'nyt-franklin', sans-serif;
+}
+
+button {
+   font-family: 'Inconsolata', sans-serif;
 }
