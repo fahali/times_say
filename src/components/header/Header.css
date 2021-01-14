@@ -5,9 +5,10 @@ header {
 }
 
 h1 {
+   color: #fff;
+   font-family: 'nyt-cheltenham', serif;
    margin-top: 4rem;
    margin-bottom: 2rem;
-   font-family: 'nyt-cheltenham', serif;
 }
 
 input,
