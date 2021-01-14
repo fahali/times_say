@@ -1,6 +1,5 @@
-import Movie from './Movie';
-
 import './Movies.css';
+import Movie from './Movie';
 
 const Movies = ({ movies }) => {
    return (

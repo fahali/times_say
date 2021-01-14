@@ -1,5 +1,5 @@
-import Search from './Search';
 import './Header.css';
+import Search from './Search';
 
 const Header = () => {
    return (
