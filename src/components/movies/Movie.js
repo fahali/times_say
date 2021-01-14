@@ -1,7 +1,10 @@
 import moment from 'moment';
+import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 
 const Movie = ({ movie }) => {
+   const history = useHistory();
+
    const capitalizeName = name =>
       name
          .split('')
@@ -11,8 +14,10 @@ const Movie = ({ movie }) => {
    const friendlyDate = date =>
       moment(date, 'YYYY-MM-DD').format('MMMM D, YYYY');
 
+   const handleClick = () => history.push(`/movies/${movie.key}`);
+
    return (
-      <Card bg='secondary' border='primary'>
+      <Card bg='secondary' border='primary' onClick={handleClick}>
          <Card.Header>
             <small>{friendlyDate(movie.publication_date)}</small>
          </Card.Header>

@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import SearchContext from './../SearchContext';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
@@ -8,10 +9,12 @@ import Button from 'react-bootstrap/Button';
 const Search = () => {
    const { setSearch } = useContext(SearchContext);
    const [query, setQuery] = useState('');
+   const history = useHistory();
 
    const handleSubmit = event => {
       event.preventDefault();
       setSearch(query);
+      history.push('/movies');
    };
 
    const handleChange = event => setQuery(event.target.value);

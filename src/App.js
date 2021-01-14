@@ -1,6 +1,7 @@
 import './App.css';
 
 import { useState } from 'react';
+import { Route } from 'react-router-dom';
 import SearchContext from './components/SearchContext';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
@@ -14,7 +15,12 @@ const App = () => {
             <Header />
          </SearchContext.Provider>
          <main>
-            <Movies query={search} />
+            <Route
+               exact
+               path='/movies'
+               render={() => <Movies query={search} />}
+            />
+            <Route path='/movies/:key' render={({ match }) => <></>} />
          </main>
       </div>
    );

@@ -16,16 +16,20 @@ const Movies = ({ query }) => {
          query;
       fetch(url)
          .then(response => response.json())
-         .then(data => setMovies(data.results));
+         .then(data =>
+            setMovies(
+               data.results.map((result, index) => {
+                  result.key = index;
+                  return result;
+               })
+            )
+         );
    }, [query]);
 
    return (
       <div className='movies-container'>
          {movies.map(movie => (
-            <Movie
-               key={`${movie.display_title}.${movie.publication_date}`}
-               movie={movie}
-            />
+            <Movie key={movie.key} movie={movie} />
          ))}
       </div>
    );
