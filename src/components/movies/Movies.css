@@ -7,10 +7,17 @@
 
 .card {
    width: 16rem;
-   /* height: 8rem; */
    margin: 1rem;
 }
 
 .card-body * {
+   font-family: 'nyt-imperial', serif;
+}
+
+.card-header {
+   text-align: right;
+}
+
+small {
    font-family: 'nyt-franklin', sans-serif;
 }
