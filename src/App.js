@@ -6,16 +6,15 @@ import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
 
 const App = () => {
-   const [search, setSearch] = useState('');
-   const [movies, setMovies] = useState([]);
+   const [search, setSearch] = useState();
 
    return (
       <div className='App'>
-         <SearchContext.Provider value={{ search, setSearch, setMovies }}>
+         <SearchContext.Provider value={{ setSearch }}>
             <Header />
          </SearchContext.Provider>
          <main>
-            <Movies movies={movies} />
+            <Movies query={search} />
          </main>
       </div>
    );

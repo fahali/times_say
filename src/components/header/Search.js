@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import SearchContext from './../SearchContext';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
@@ -6,32 +6,24 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
 const Search = () => {
-   const { search, setSearch, setMovies } = useContext(SearchContext);
+   const { setSearch } = useContext(SearchContext);
+   const [query, setQuery] = useState('');
 
-   const handleSubmit = async event => {
+   const handleSubmit = event => {
       event.preventDefault();
-      const url =
-         'https://api.nytimes.com/svc/movies/v2/reviews/search.json?' +
-         'api-key=' +
-         process.env.REACT_APP_API_KEY +
-         '&' +
-         'query=' +
-         search;
-      const response = await fetch(url);
-      const data = await response.json();
-      setMovies(data.results);
+      setSearch(query);
    };
 
-   const handleChange = event => setSearch(event.target.value);
+   const handleChange = event => setQuery(event.target.value);
 
    return (
       <Form onSubmit={handleSubmit}>
          <InputGroup className='mb-3'>
             <FormControl
-               id='search'
+               id='query'
                placeholder='Search for movies...'
                onChange={handleChange}
-               value={search}
+               value={query}
                size='lg'
                htmlSize='48'
             />
