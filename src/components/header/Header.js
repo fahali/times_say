@@ -1,4 +1,5 @@
 import Search from './Search';
+import './Header.css';
 
 const Header = () => {
    return (
