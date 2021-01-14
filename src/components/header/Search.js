@@ -1,12 +1,18 @@
 import { useContext } from 'react';
 import SearchContext from './../SearchContext';
 
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+
+import './Search.css';
+
 const Search = () => {
    const { search, setSearch, setMovies } = useContext(SearchContext);
 
    const handleSubmit = async event => {
       event.preventDefault();
-
       const url =
          'https://api.nytimes.com/svc/movies/v2/reviews/search.json?' +
          'api-key=' +
@@ -22,16 +28,23 @@ const Search = () => {
    const handleChange = event => setSearch(event.target.value);
 
    return (
-      <form className='search-container' onSubmit={handleSubmit}>
-         <input
-            id='search'
-            type='text'
-            placeholder='Enter search query'
-            onChange={handleChange}
-            value={search}
-         />
-         <button type='submit'>SEARCH</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+         <InputGroup className='mb-3'>
+            <FormControl
+               id='search'
+               placeholder='Search for movies...'
+               onChange={handleChange}
+               value={search}
+               size='lg'
+               htmlSize='48'
+            />
+            <InputGroup.Append>
+               <Button variant='primary' type='submit' size='lg'>
+                  Search!
+               </Button>
+            </InputGroup.Append>
+         </InputGroup>
+      </Form>
    );
 };
 

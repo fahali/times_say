@@ -1,10 +1,11 @@
 header {
-   margin-top: 4rem;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
 
 h1 {
+   margin-top: 4rem;
+   margin-bottom: 2rem;
    font-family: 'nyt-cheltenham', serif;
 }
