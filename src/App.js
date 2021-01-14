@@ -2,12 +2,15 @@ import './App.css';
 
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
-import SearchContext from './components/SearchContext';
+import SearchContext from './components/header/SearchContext';
+import MovieContext from './components/movies/MovieContext';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
+import MovieDetails from './components/movies/MovieDetails';
 
 const App = () => {
    const [search, setSearch] = useState();
+   const [movie, setMovie] = useState();
 
    return (
       <div className='App'>
@@ -15,12 +18,17 @@ const App = () => {
             <Header />
          </SearchContext.Provider>
          <main>
+            <MovieContext.Provider value={{ setMovie }}>
+               <Route
+                  exact
+                  path='/movies'
+                  render={() => <Movies query={search} />}
+               />
+            </MovieContext.Provider>
             <Route
-               exact
-               path='/movies'
-               render={() => <Movies query={search} />}
+               path='/movies/:key'
+               render={() => <MovieDetails movie={movie} />}
             />
-            <Route path='/movies/:key' render={({ match }) => <></>} />
          </main>
       </div>
    );
