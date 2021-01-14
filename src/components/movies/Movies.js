@@ -1,5 +1,7 @@
 import Movie from './Movie';
 
+import './Movies.css';
+
 const Movies = ({ movies }) => {
    return (
       <div className='movies-container'>

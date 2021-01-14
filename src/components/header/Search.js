@@ -6,8 +6,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
-import './Search.css';
-
 const Search = () => {
    const { search, setSearch, setMovies } = useContext(SearchContext);
 

@@ -9,3 +9,8 @@ h1 {
    margin-bottom: 2rem;
    font-family: 'nyt-cheltenham', serif;
 }
+
+input,
+button {
+   font-family: 'nyt-franklin', sans-serif;
+}
