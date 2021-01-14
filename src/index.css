@@ -14,3 +14,20 @@ code {
 a {
    color: #61dafb;
 }
+
+.movies-container {
+   margin-top: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.card {
+   width: 16rem;
+   height: 8rem;
+   margin: 1rem;
+}
+
+.card-body * {
+   color: black;
+}
