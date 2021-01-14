@@ -18,13 +18,15 @@ const App = () => {
             <Header />
          </SearchContext.Provider>
          <main>
-            <MovieContext.Provider value={{ setMovie }}>
-               <Route
-                  exact
-                  path='/movies'
-                  render={() => <Movies query={search} />}
-               />
-            </MovieContext.Provider>
+            <Route
+               exact
+               path='/movies'
+               render={() => (
+                  <MovieContext.Provider value={{ setMovie }}>
+                     <Movies query={search} />
+                  </MovieContext.Provider>
+               )}
+            />
             <Route
                path='/movies/:key'
                render={() => <MovieDetails movie={movie} />}
