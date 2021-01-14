@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import SearchContext from './components/SearchContext';
 import Header from './components/header/Header';
-import Movies from './components/Movies';
+import Movies from './components/movies/Movies';
 
 const App = () => {
    const [search, setSearch] = useState('');
