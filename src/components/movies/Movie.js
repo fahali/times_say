@@ -25,7 +25,6 @@ const Movie = ({ movie }) => {
          <Card.Img
             variant='bottom'
             src={movie.multimedia && movie.multimedia.src}
-            alt={`thumnail of ${movie.display_title}`}
          />
       </Card>
    );
