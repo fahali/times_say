@@ -2,6 +2,12 @@
    font-family: 'nyt-imperial', serif;
 }
 
+.movies-page {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 .movies-container {
    margin-top: 1rem;
    display: flex;
