@@ -18,22 +18,26 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 | Render components with mock data           | H        | 4 hrs          | 2 hrs         | 2 hrs       |
 | Fetch search queries                       | H        | 2 hrs          | 1 hrs         | 1 hrs       |
 | Basic styling                              | H        | 4 hrs          | 4 hrs         | 4 hrs       |
-| Critics picks                              | H        | 4 hrs          | X hrs         | X hrs       |
+| Routing                                    | M        | 4 hrs          | 4 hrs         | 4 hrs       |
+| Advanced styling                           | M        | 4 hrs          | 4 hrs         | 4 hrs       |
+| Pagination                                 | M        | 4 hrs          | X hrs         | X hrs       |
+| Critics picks                              | M        | 4 hrs          | X hrs         | X hrs       |
 | Movie poster API                           | M        | 8 hrs          | X hrs         | X hrs       |
 | Granular search options                    | M        | 8 hrs          | X hrs         | X hrs       |
 | NYT Books API                              | L        | 12 hrs         | X hrs         | X hrs       |
-| Total                                      | X        | 44 hrs         | 9 hrs         | 9 hrs       |
+| Total                                      | X        | 56 hrs         | 17 hrs        | 17 hrs      |
 
 ## Project Schedule
 
 | Day         | Deliverable                             | Status      |
 | ----------- | --------------------------------------- | ----------- |
 | Jan 13      | Setup / Render mock data / Fetch search | complete    |
-| Jan 14      | Basic styling / Critics picks           | in progress |
-| Jan 15      | Movie poster API                        | incomplete  |
-| Jan 16      | Granular search options                 | incomplete  |
-| Jan 17      | NYT Books API                           | incomplete  |
-| Jan 18 - 20 | Polishing up                            | incomplete  |
+| Jan 14      | Basic styling / Routing                 | complete    |
+| Jan 15      | Advanced styling / pagination           | in progress |
+| Jan 16      | Critics picks / Movie poster API        | incomplete  |
+| Jan 17      | Granular search options                 | incomplete  |
+| Jan 18      | NYT Books API                           | incomplete  |
+| Jan 19 - 20 | Polishing up                            | incomplete  |
 | Jan 21      | Presentations                           |
 
 ## User Stories
@@ -46,8 +50,8 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 ### MVP Goals
 
 -  [x] Successfully fetch review data based on search query
--  [ ] Render the review blurb in a visually compelling interface
--  [ ] Redirect to NYT website for the full review
+-  [x] Render the review blurb in a visually compelling interface
+-  [x] Redirect to NYT website for the full review
 -  [ ] Render critics picks: a list of favorites curated by NYT staff
 
 ### Stretch Goals
