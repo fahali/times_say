@@ -1,15 +1,22 @@
 import './Header.css';
 
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Search from './Search';
 
 const Header = () => {
+   const [query, setQuery] = useState('');
+   const history = useHistory();
+
+   const handleClick = () => {
+      setQuery('');
+      history.push('/');
+   };
+
    return (
       <header>
-         <h1>
-            <Link to='/'>What does the Times say?</Link>
-         </h1>
-         <Search />
+         <h1 onClick={handleClick}>What does the Times say?</h1>
+         <Search query={query} setQuery={setQuery} />
       </header>
    );
 };

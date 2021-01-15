@@ -9,6 +9,15 @@ header h1 {
    margin-bottom: 2rem;
 }
 
+header h1:hover {
+   color: var(--cornflower);
+   cursor: pointer;
+}
+
+header h1:active {
+   text-shadow: 0 0 2px var(--cornflower);
+}
+
 input,
 button {
    font-family: 'nyt-franklin', sans-serif;

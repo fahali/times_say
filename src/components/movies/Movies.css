@@ -18,6 +18,11 @@
 
 .movie-card:hover {
    box-shadow: 0 0 3px 3px var(--cornflower);
+   cursor: pointer;
+}
+
+.movie-card:active {
+   box-shadow: 0 0 6px 6px var(--cornflower);
 }
 
 .movie-header {
@@ -66,8 +71,6 @@
    margin-top: 4rem;
 }
 
-.details-footer * {
+.details-footer a {
    font-family: 'Inconsalata', sans-serif;
-   font-weight: 200;
-   margin: 0;
 }

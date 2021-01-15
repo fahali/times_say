@@ -18,5 +18,8 @@ a {
 
 a:hover {
    color: var(--cornflower);
-   text-decoration: none;
+}
+
+a:active {
+   text-shadow: 0 0 1px var(--cornflower);
 }
