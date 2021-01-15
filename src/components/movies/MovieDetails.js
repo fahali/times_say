@@ -33,7 +33,8 @@ const MovieDetails = ({ movie }) => {
          </Card.Body>
          <Card.Footer className='details-footer'>
             <p>
-               Read the rest at <a href={movie.link.url}>The New York Times</a>
+               Read the rest at <a href={movie.link.url}>The New York Times</a>.
+               This will redirect you to The New York Times webpage.
             </p>
          </Card.Footer>
       </Card>

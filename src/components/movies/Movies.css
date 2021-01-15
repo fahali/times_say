@@ -38,7 +38,7 @@
 .details-header {
    display: flex;
    justify-content: space-between;
-   align-items: baseline;
+   align-items: center;
 }
 
 .details-header h1 {
@@ -50,6 +50,7 @@
    font-family: 'nyt-franklin', sans-serif;
    font-size: 1.2rem;
    margin: 0;
+   flex: none;
 }
 
 .details-body .card-title {
