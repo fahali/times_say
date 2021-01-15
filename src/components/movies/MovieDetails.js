@@ -2,27 +2,19 @@ import Card from 'react-bootstrap/Card';
 import { capitalizeName, friendlyDate } from './helper/Helper';
 
 const MovieDetails = ({ movie }) => {
-   const headerDetails = () => {
-      let details = '';
+   const formatYear = date => date && date.split('-')[0];
 
-      if (movie.opening_date && movie.mpaa_rating) {
-         details = `${friendlyDate(movie.opening_date)} | Rated ${
-            movie.mpaa_rating
-         }`;
-      } else if (movie.opening_date) {
-         details = friendlyDate(movie.opening_date);
-      } else if (movie.mpaa_rating) {
-         details = `Rated ${movie.mpaa_rating}`;
-      }
-
-      return details;
-   };
+   const formatRating = rating =>
+      rating && rating !== 'Not Rated' ? `Rated ${rating}` : 'Not Rated';
 
    return (
       <Card bg='dark' className='details-card'>
          <Card.Header className='details-header'>
             <h1>{movie.display_title}</h1>
-            <p>{headerDetails()}</p>
+            <div className='details-subheader'>
+               <p>{formatYear(movie.opening_date)}</p>
+               <p>{formatRating(movie.mpaa_rating)}</p>
+            </div>
          </Card.Header>
          <Card.Body className='details-body'>
             <Card.Title>{movie.headline}</Card.Title>

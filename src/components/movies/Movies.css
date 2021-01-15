@@ -51,10 +51,15 @@
    margin: 0;
 }
 
-.details-header p {
+.details-subheader {
+   flex: none;
+}
+
+.details-subheader p {
    font-family: 'nyt-franklin', sans-serif;
    font-size: 1.2rem;
    margin: 0;
+   text-align: right;
 }
 
 .details-body .card-title {
