@@ -2,11 +2,13 @@
 
 What does the Times say? This app retrieves movie reviews from the New York Times archives. The NYT Movie Reviews API is available here: https://developer.nytimes.com/docs/movie-reviews-api/1/overview
 
-_TODO: Add live site URL._
+The live site is hosted by Heroku:
+
+-  https://timessay.herokuapp.com/
 
 ## Technologies Used
 
-The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project will most likely be hosted on Heroku, or with Surge if it suits my needs better.
+The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project is hosted by Heroku.
 
 Once again project management is handled with [Trello](https://trello.com/b/TrNxWlVZ/times-say).
 
@@ -52,11 +54,11 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 -  [x] Successfully fetch review data based on search query
 -  [x] Render the review blurb in a visually compelling interface
 -  [x] Redirect to NYT website for the full review
--  [ ] Render critics picks: a list of favorites curated by NYT staff
 
 ### Stretch Goals
 
 -  [ ] Integrate a movie poster API to fetch high quality artwork to go with the review blurbs and generate visual interest
+-  [ ] Render critics picks: a list of favorites curated by NYT staff
 -  [ ] Allow granular search options like release year and review author
 -  [ ] Integrate NYT Books API for book reviews
 
