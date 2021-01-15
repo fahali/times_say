@@ -14,11 +14,7 @@ const Movie = ({ movie }) => {
    };
 
    return (
-      <Card
-         bg='dark'
-         border='primary'
-         className='movie-card'
-         onClick={handleClick}>
+      <Card bg='dark' className='movie-card' onClick={handleClick}>
          <Card.Header className='movie-header'>
             <small>{friendlyDate(movie.publication_date)}</small>
          </Card.Header>

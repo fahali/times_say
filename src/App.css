@@ -1,5 +1,5 @@
 :root {
-   --accent: #89c2ff;
+   --cornflower: #89c2ff;
 }
 
 h1 {
@@ -17,6 +17,6 @@ a {
 }
 
 a:hover {
-   color: var(--accent);
+   color: var(--cornflower);
    text-decoration: none;
 }

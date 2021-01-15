@@ -3,7 +3,7 @@ import { capitalizeName, friendlyDate } from './helper/Helper';
 
 const MovieDetails = ({ movie }) => {
    return (
-      <Card bg='dark' border='primary' className='details-card'>
+      <Card bg='dark' className='details-card'>
          <Card.Header className='details-header'>
             <h1>{movie.display_title}</h1>
             <p>

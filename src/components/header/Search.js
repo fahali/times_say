@@ -31,7 +31,11 @@ const Search = () => {
                htmlSize='48'
             />
             <InputGroup.Append>
-               <Button variant='primary' type='submit' size='lg'>
+               <Button
+                  variant='light'
+                  style={{ backgroundColor: 'var(--cornflower)' }}
+                  type='submit'
+                  size='lg'>
                   Search!
                </Button>
             </InputGroup.Append>
