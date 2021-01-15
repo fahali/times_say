@@ -9,10 +9,7 @@ header h1 {
    margin-bottom: 2rem;
 }
 
-input {
-   font-family: 'nyt-franklin', sans-serif;
-}
-
+input,
 button {
-   font-family: 'Inconsolata', sans-serif;
+   font-family: 'nyt-franklin', sans-serif;
 }

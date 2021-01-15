@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import { capitalizeName, friendlyDate } from './Movie';
+import { capitalizeName, friendlyDate } from './helper/Helper';
 
 const MovieDetails = ({ movie }) => {
    return (

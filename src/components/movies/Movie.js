@@ -1,16 +1,8 @@
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import moment from 'moment';
 import MovieContext from './MovieContext';
-
-const capitalizeName = name =>
-   name
-      .split('')
-      .map(char => char.toUpperCase())
-      .join('');
-
-const friendlyDate = date => moment(date, 'YYYY-MM-DD').format('MMMM D, YYYY');
+import { capitalizeName, friendlyDate } from './helper/Helper';
 
 const Movie = ({ movie }) => {
    const { setMovie } = useContext(MovieContext);
@@ -45,4 +37,3 @@ const Movie = ({ movie }) => {
 };
 
 export default Movie;
-export { capitalizeName, friendlyDate };

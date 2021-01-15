@@ -1,29 +1,26 @@
 import './Movies.css';
 
 import { useEffect, useState } from 'react';
+import APIHelper from './helper/APIHelper';
 import Movie from './Movie';
 
 const Movies = ({ query }) => {
    const [movies, setMovies] = useState([]);
 
+   const fetchMovies = async query => {
+      const url = APIHelper.searchURL(query);
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      return data.results.map((result, index) => {
+         result.key = index;
+         return result;
+      });
+   };
+
    useEffect(() => {
-      const url =
-         'https://api.nytimes.com/svc/movies/v2/reviews/search.json?' +
-         'api-key=' +
-         process.env.REACT_APP_API_KEY +
-         '&' +
-         'query=' +
-         query;
-      fetch(url)
-         .then(response => response.json())
-         .then(data =>
-            setMovies(
-               data.results.map((result, index) => {
-                  result.key = index;
-                  return result;
-               })
-            )
-         );
+      fetchMovies(query).then(movies => setMovies(movies));
    }, [query]);
 
    return (
