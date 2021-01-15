@@ -9,7 +9,10 @@ import Movies from './components/movies/Movies';
 import MovieDetails from './components/movies/MovieDetails';
 
 const App = () => {
-   const [search, setSearch] = useState();
+   // by initializing our search var with an empty string
+   // if the user navigates to /movies, they will get the most recent reviews
+   // an empty query returns the most recent reviews
+   const [search, setSearch] = useState('');
    const [movie, setMovie] = useState();
 
    return (
