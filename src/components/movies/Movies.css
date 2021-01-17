@@ -54,8 +54,23 @@
    cursor: pointer;
 }
 
+@keyframes pop {
+   from {
+      box-shadow: 0 0 3px 3px var(--cornflower);
+   }
+
+   50% {
+      box-shadow: 0 0 6px 6px var(--primary);
+   }
+
+   to {
+      box-shadow: none;
+   }
+}
+
 .movie-card:active {
-   box-shadow: 0 0 6px 6px var(--cornflower);
+   box-shadow: none;
+   animation: pop 0.75s infinite;
 }
 
 .movie-header {
