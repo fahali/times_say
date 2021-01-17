@@ -1,7 +1,7 @@
 import './App.css';
 
 import { useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import MovieContext from './components/movies/MovieContext';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
@@ -15,25 +15,28 @@ const App = () => {
       <div className='App'>
          <Header setTotalPages={setTotalPages} />
          <main>
-            {/* TODO add redirect for /movies to empty search page 1 */}
-            <Route
-               exact
-               path='/movies/:query/:page'
-               render={() => (
-                  <MovieContext.Provider value={{ setMovie }}>
-                     <Movies
-                        totalPages={totalPages}
-                        setTotalPages={setTotalPages}
-                     />
-                  </MovieContext.Provider>
-               )}
-            />
-            {/* TODO rethink how movies are keyed */}
-            <Route
-               exact
-               path='/movie/:key'
-               render={() => <MovieDetails movie={movie} />}
-            />
+            <Switch>
+               <Route
+                  path='/movies/:query/:page'
+                  render={() => (
+                     <MovieContext.Provider value={{ setMovie }}>
+                        <Movies
+                           totalPages={totalPages}
+                           setTotalPages={setTotalPages}
+                        />
+                     </MovieContext.Provider>
+                  )}
+               />
+               <Route
+                  path='/movies'
+                  render={() => <Redirect to='/movies/recent/1' />}
+               />
+               {/* TODO rethink how movies are keyed */}
+               <Route
+                  path='/movie/:key'
+                  render={() => <MovieDetails movie={movie} />}
+               />
+            </Switch>
          </main>
       </div>
    );
