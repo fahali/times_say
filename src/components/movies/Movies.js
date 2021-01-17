@@ -50,6 +50,12 @@ const Movies = ({ totalPages, setTotalPages }) => {
                <Movie key={movie.key} movie={movie} />
             ))}
          </div>
+         <Pager
+            hasMore={hasMore}
+            query={query}
+            page={page}
+            totalPages={totalPages}
+         />
       </div>
    );
 };

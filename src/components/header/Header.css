@@ -22,3 +22,9 @@ input,
 button {
    font-family: 'nyt-franklin', sans-serif;
 }
+
+.btn-primary {
+   color: var(--dark-grey);
+   background-color: var(--cornflower);
+   border-color: var(--cornflower);
+}
