@@ -19,11 +19,9 @@ const App = () => {
             <Route
                exact
                path='/movies/:query/:page'
-               render={({ match: { params } }) => (
+               render={() => (
                   <MovieContext.Provider value={{ setMovie }}>
                      <Movies
-                        query={params.query}
-                        page={params.page}
                         totalPages={totalPages}
                         setTotalPages={setTotalPages}
                      />

@@ -1,13 +1,15 @@
 import './Movies.css';
 
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Movie from './Movie';
 import Pager from './Pager';
 import APIHelper from './helper/APIHelper';
 
-const Movies = ({ query, page, totalPages, setTotalPages }) => {
+const Movies = ({ totalPages, setTotalPages }) => {
    const [movies, setMovies] = useState([]);
    const [hasMore, setHasMore] = useState(false);
+   const { query, page } = useParams();
 
    const fetchMovies = async (search, offset) => {
       const url = APIHelper.searchURL(search, offset);
