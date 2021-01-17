@@ -1,19 +1,17 @@
-import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import SearchContext from './SearchContext';
 
 const Search = ({ query, setQuery }) => {
-   const { setSearch } = useContext(SearchContext);
    const history = useHistory();
 
    const handleSubmit = event => {
       event.preventDefault();
-      setSearch(query);
-      history.push('/movies');
+      // empty query returns all reviews sorted in order of recency
+      // set this explicitly for our URL and handle when fetching
+      history.push(`/movies/${query === '' ? 'recent' : query}/1`);
    };
 
    const handleChange = event => setQuery(event.target.value);

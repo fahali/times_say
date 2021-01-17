@@ -10,7 +10,7 @@ const Movie = ({ movie }) => {
 
    const handleClick = () => {
       setMovie(movie);
-      history.push(`/movies/${movie.key}`);
+      history.push(`/movie/${movie.key}`); // TODO rethink how movies are keyed
    };
 
    return (

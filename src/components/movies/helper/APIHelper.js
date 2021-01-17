@@ -12,17 +12,21 @@ class APIHelper {
    static and = '&';
    static key_param = 'api-key=';
    static query_param = 'query=';
+   static offset_param = 'offset=';
 
    /* END POINTS */
    static searchEP = this.base + this.reviews + this.search;
 
-   static searchURL = query =>
+   static searchURL = (query, offset) =>
       this.searchEP +
       this.key_param +
       this.key +
       this.and +
       this.query_param +
-      query;
+      query +
+      this.and +
+      this.offset_param +
+      offset;
 }
 
 export default APIHelper;

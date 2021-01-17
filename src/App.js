@@ -2,36 +2,32 @@ import './App.css';
 
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
-import SearchContext from './components/header/SearchContext';
 import MovieContext from './components/movies/MovieContext';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
 import MovieDetails from './components/movies/MovieDetails';
 
 const App = () => {
-   // by initializing our search var with an empty string
-   // if the user navigates to /movies, they will get the most recent reviews
-   // an empty query returns the most recent reviews
-   const [search, setSearch] = useState('');
-   const [movie, setMovie] = useState();
+   const [movie, setMovie] = useState(null);
 
    return (
       <div className='App'>
-         <SearchContext.Provider value={{ setSearch }}>
-            <Header />
-         </SearchContext.Provider>
+         <Header />
          <main>
+            {/* TODO add redirect for /movies to empty search page 1 */}
             <Route
                exact
-               path='/movies'
-               render={() => (
+               path='/movies/:query/:page'
+               render={({ match: { params } }) => (
                   <MovieContext.Provider value={{ setMovie }}>
-                     <Movies query={search} />
+                     <Movies query={params.query} page={params.page} />
                   </MovieContext.Provider>
                )}
             />
+            {/* TODO rethink how movies are keyed */}
             <Route
-               path='/movies/:key'
+               exact
+               path='/movie/:key'
                render={() => <MovieDetails movie={movie} />}
             />
          </main>
