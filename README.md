@@ -22,12 +22,12 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 | Basic styling                              | H        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Routing                                    | M        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Advanced styling                           | M        | 4 hrs          | 4 hrs         | 4 hrs       |
-| Pagination                                 | M        | 4 hrs          | X hrs         | X hrs       |
+| Pagination                                 | M        | 4 hrs          | 8 hrs         | 8 hrs       |
 | Critics picks                              | M        | 4 hrs          | X hrs         | X hrs       |
 | Movie poster API                           | M        | 8 hrs          | X hrs         | X hrs       |
 | Granular search options                    | M        | 8 hrs          | X hrs         | X hrs       |
 | NYT Books API                              | L        | 12 hrs         | X hrs         | X hrs       |
-| Total                                      | X        | 56 hrs         | 17 hrs        | 17 hrs      |
+| Total                                      | X        | 56 hrs         | 25 hrs        | 25 hrs      |
 
 ## Project Schedule
 
@@ -35,8 +35,8 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 | ----------- | --------------------------------------- | ----------- |
 | Jan 13      | Setup / Render mock data / Fetch search | complete    |
 | Jan 14      | Basic styling / Routing                 | complete    |
-| Jan 15      | Advanced styling / pagination           | in progress |
-| Jan 16      | Critics picks / Movie poster API        | incomplete  |
+| Jan 15      | Advanced styling / pagination           | complete    |
+| Jan 16      | Critics picks / Movie poster API        | in progress |
 | Jan 17      | Granular search options                 | incomplete  |
 | Jan 18      | NYT Books API                           | incomplete  |
 | Jan 19 - 20 | Polishing up                            | incomplete  |
