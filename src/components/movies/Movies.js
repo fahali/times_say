@@ -5,7 +5,7 @@ import Movie from './Movie';
 import Pager from './Pager';
 import APIHelper from './helper/APIHelper';
 
-const Movies = ({ query, page }) => {
+const Movies = ({ query, page, totalPages, setTotalPages }) => {
    const [movies, setMovies] = useState([]);
    const [hasMore, setHasMore] = useState(false);
 
@@ -30,13 +30,19 @@ const Movies = ({ query, page }) => {
             );
 
             setHasMore(data.has_more);
+            setTotalPages(pages => (pages < page ? page : pages));
          }
       );
-   }, [query, page]);
+   }, [query, page, setTotalPages]);
 
    return (
       <div className='movies-page'>
-         <Pager hasMore={hasMore} query={query} page={page} />
+         <Pager
+            hasMore={hasMore}
+            query={query}
+            page={page}
+            totalPages={totalPages}
+         />
          <div className='movies-container'>
             {movies.map(movie => (
                <Movie key={movie.key} movie={movie} />

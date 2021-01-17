@@ -4,11 +4,12 @@ import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
-const Search = ({ query, setQuery }) => {
+const Search = ({ query, setQuery, setTotalPages }) => {
    const history = useHistory();
 
    const handleSubmit = event => {
       event.preventDefault();
+      setTotalPages(0);
       // empty query returns all reviews sorted in order of recency
       // set this explicitly for our URL and handle when fetching
       history.push(`/movies/${query === '' ? 'recent' : query}/1`);

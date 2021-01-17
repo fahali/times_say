@@ -1,41 +1,45 @@
+import { useHistory } from 'react-router-dom';
 import Pagination from 'react-bootstrap/Pagination';
 
-const Pager = ({ hasMore, query, page }) => {
+const Pager = ({ hasMore, query, page, totalPages }) => {
    // TODO add ellipses for long sets of pages
    // TODO add first and last buttons for long sets of pages
-   // TODO page has to be stored so we don't lose page history going back
-   // TODO can page item anchors be rendered as Links instead?
-   // TODO disable singular pages
+
+   const history = useHistory();
+
+   const handleClick = page => history.push(`/movies/${query}/${page}`);
 
    const generatePages = () => {
       const items = [];
       page = Number(page);
+      totalPages = Number(totalPages);
 
-      if (page > 1)
-         items.push(
-            <Pagination.Prev
-               key={items.length}
-               href={`/movies/${query}/${page - 1}`}
-            />
-         );
+      items.push(
+         <Pagination.Prev
+            key={items.length}
+            disabled={!(page > 1)}
+            onClick={() => handleClick(page - 1)}
+         />
+      );
 
-      for (let i = 0; i < page; i++) {
+      for (let i = 1; i <= totalPages; i++) {
          items.push(
             <Pagination.Item
                key={items.length}
-               href={`/movies/${query}/${i + 1}`}>
-               {i + 1}
+               active={page === i}
+               onClick={() => handleClick(i)}>
+               {i}
             </Pagination.Item>
          );
       }
 
-      if (hasMore)
-         items.push(
-            <Pagination.Next
-               key={items.length}
-               href={`/movies/${query}/${page + 1}`}
-            />
-         );
+      items.push(
+         <Pagination.Next
+            key={items.length}
+            disabled={!hasMore}
+            onClick={() => handleClick(page + 1)}
+         />
+      );
 
       return items;
    };

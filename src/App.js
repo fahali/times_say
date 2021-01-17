@@ -9,10 +9,11 @@ import MovieDetails from './components/movies/MovieDetails';
 
 const App = () => {
    const [movie, setMovie] = useState(null);
+   const [totalPages, setTotalPages] = useState(0);
 
    return (
       <div className='App'>
-         <Header />
+         <Header setTotalPages={setTotalPages} />
          <main>
             {/* TODO add redirect for /movies to empty search page 1 */}
             <Route
@@ -20,7 +21,12 @@ const App = () => {
                path='/movies/:query/:page'
                render={({ match: { params } }) => (
                   <MovieContext.Provider value={{ setMovie }}>
-                     <Movies query={params.query} page={params.page} />
+                     <Movies
+                        query={params.query}
+                        page={params.page}
+                        totalPages={totalPages}
+                        setTotalPages={setTotalPages}
+                     />
                   </MovieContext.Provider>
                )}
             />
