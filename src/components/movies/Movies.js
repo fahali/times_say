@@ -32,7 +32,9 @@ const Movies = ({ totalPages, setTotalPages }) => {
             );
 
             setHasMore(data.has_more);
-            setTotalPages(pages => (pages < page ? page : pages));
+            setTotalPages(pages =>
+               Number(pages) < Number(page) ? page : pages
+            );
          }
       );
    }, [query, page, setTotalPages]);
