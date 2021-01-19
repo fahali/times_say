@@ -26,12 +26,13 @@ The New York Times is an old newspaper and has articles from before World War 2,
 | Basic styling                              | H        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Routing                                    | M        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Advanced styling                           | M        | 4 hrs          | 4 hrs         | 4 hrs       |
-| Pagination                                 | M        | 4 hrs          | 8 hrs         | 8 hrs       |
+| Pagination                                 | M        | 4 hrs          | 14 hrs        | 14 hrs      |
+| Bug fixes                                  | M        | 8 hrs          | 4 hrs         | 4 hrs       |
 | Critics picks                              | M        | 4 hrs          | X hrs         | X hrs       |
 | Movie poster API                           | M        | 8 hrs          | X hrs         | X hrs       |
 | Granular search options                    | M        | 8 hrs          | X hrs         | X hrs       |
 | NYT Books API                              | L        | 12 hrs         | X hrs         | X hrs       |
-| Total                                      | X        | 56 hrs         | 25 hrs        | 25 hrs      |
+| Total                                      | X        | 56 hrs         | 35 hrs        | 35 hrs      |
 
 ## Project Schedule
 
