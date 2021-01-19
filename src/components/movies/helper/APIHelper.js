@@ -36,22 +36,33 @@ class APIHelper {
    /* TMDB API */
    static tmdb_init = { headers: { Authorization: `Bearer ${this.tmdb_key}` } };
    static tmdb_base = 'https://api.themoviedb.org/3';
-   static tmdb_search_movie = '/search/movie/?';
+   static tmdb_config = '/configuration';
+   static tmdb_searchMovie = '/search/movie/?';
 
    /* TMDB PARAMS */
+   static tmdb_posterSize = 'w342';
    static tmdb_year = 'year=';
 
    /* TMDB END POINTS */
-   static tmdb_searchMovieEP = this.tmdb_base + this.tmdb_search_movie;
+   static tmdb_configEP = this.tmdb_base + this.tmdb_config;
+   static tmdb_searchMovieEP = this.tmdb_base + this.tmdb_searchMovie;
 
    /* TMDB API METHODS */
-   static tmdb_SearchMovieURL = (query, year) =>
-      this.tmdb_searchMovieEP +
-      this.queryParam +
-      query +
-      this.and +
-      this.tmdb_year +
-      year;
+   static tmdb_posterURL = (url, path) => url + this.tmdb_posterSize + path;
+
+   static tmdb_configRequest = () =>
+      Request(this.tmdb_configEP, this.tmdb_init);
+
+   static tmdb_searchMovieRequest = (query, year) =>
+      Request(
+         this.tmdb_searchMovieEP +
+            this.queryParam +
+            query +
+            this.and +
+            this.tmdb_year +
+            year,
+         this.tmdb_init
+      );
    /* END TMDB API */
 }
 
