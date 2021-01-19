@@ -15,7 +15,7 @@ const Movies = ({ totalPages, setTotalPages }) => {
 
    const fetchMovies = async (search, offset) => {
       try {
-         const url = APIHelper.searchURL(search, offset);
+         const url = APIHelper.nyt_searchURL(search, offset);
          const response = await fetch(url);
 
          if (response.status === 200) {
@@ -71,6 +71,7 @@ const Movies = ({ totalPages, setTotalPages }) => {
             page={page}
             totalPages={totalPages}
          />
+         {/* TODO explore React.createRef() to mitigate findDOMNode msgs */}
          {requestFailed && <ErrorModal visible={requestFailed} />}
       </div>
    );

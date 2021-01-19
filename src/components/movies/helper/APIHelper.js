@@ -1,32 +1,58 @@
 class APIHelper {
-   /* API KEY */
-   static key = process.env.REACT_APP_API_KEY;
+   /* API KEYS */
+   static nyt_key = process.env.REACT_APP_NYT_API_KEY;
+   static tmdb_key = process.env.REACT_APP_TMDB_API_KEY;
 
-   /* API */
-   static base = 'https://api.nytimes.com/svc/movies/v2';
-   static critics = '/critics/';
-   static reviews = '/reviews/';
-   static search = 'search.json?';
-
-   /* PARAMS */
+   /* COMMON PARAMS */
    static and = '&';
-   static key_param = 'api-key=';
-   static query_param = 'query=';
-   static offset_param = 'offset=';
+   static queryParam = 'query=';
 
-   /* END POINTS */
-   static searchEP = this.base + this.reviews + this.search;
+   /* NYT API */
+   static nyt_base = 'https://api.nytimes.com/svc/movies/v2';
+   static nyt_critics = '/critics';
+   static nyt_reviews = '/reviews';
+   static nyt_search = '/search.json?';
 
-   static searchURL = (query, offset) =>
-      this.searchEP +
-      this.key_param +
-      this.key +
+   /* NYT PARAMS */
+   static nyt_keyParam = 'api-key=';
+   static nyt_offsetParam = 'offset=';
+
+   /* NYT END POINTS */
+   static nyt_searchEP = this.nyt_base + this.nyt_reviews + this.nyt_search;
+
+   /* NYT API METHODS */
+   static nyt_searchURL = (query, offset) =>
+      this.nyt_searchEP +
+      this.nyt_keyParam +
+      this.nyt_key +
       this.and +
-      this.query_param +
+      this.queryParam +
       query +
       this.and +
-      this.offset_param +
+      this.nyt_offsetParam +
       offset;
+   /* END NYT API */
+
+   /* TMDB API */
+   static tmdb_init = { headers: { Authorization: `Bearer ${this.tmdb_key}` } };
+   static tmdb_base = 'https://api.themoviedb.org/3';
+   static tmdb_search_movie = '/search/movie/?';
+
+   /* TMDB PARAMS */
+   static tmdb_year = 'year=';
+
+   /* TMDB END POINTS */
+   static tmdb_searchMovieEP = this.tmdb_base + this.tmdb_search_movie;
+
+   /* TMDB API METHODS */
+   static tmdb_SearchMovieURL = (query, year) =>
+      this.tmdb_searchMovieEP +
+      this.queryParam +
+      query +
+      this.and +
+      this.tmdb_year +
+      year;
+   /* END TMDB API */
 }
 
 export default APIHelper;
