@@ -40,7 +40,7 @@ class APIHelper {
    static tmdb_searchMovie = '/search/movie/?';
 
    /* TMDB PARAMS */
-   static tmdb_posterSize = 'w342';
+   static tmdb_posterSize = 'original';
    static tmdb_year = 'year=';
 
    /* TMDB END POINTS */
@@ -51,10 +51,10 @@ class APIHelper {
    static tmdb_posterURL = (url, path) => url + this.tmdb_posterSize + path;
 
    static tmdb_configRequest = () =>
-      Request(this.tmdb_configEP, this.tmdb_init);
+      new Request(this.tmdb_configEP, this.tmdb_init);
 
    static tmdb_searchMovieRequest = (query, year) =>
-      Request(
+      new Request(
          this.tmdb_searchMovieEP +
             this.queryParam +
             query +

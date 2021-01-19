@@ -5,10 +5,13 @@ import { useHistory } from 'react-router-dom';
 import Search from './Search';
 
 const Header = ({ setTotalPages }) => {
+   const [disabled, setDisabled] = useState(false);
    const [query, setQuery] = useState('');
+
    const history = useHistory();
 
    const handleClick = () => {
+      setDisabled(false);
       setTotalPages(0);
       setQuery('');
       history.push('/');
@@ -21,6 +24,8 @@ const Header = ({ setTotalPages }) => {
             query={query}
             setQuery={setQuery}
             setTotalPages={setTotalPages}
+            disabled={disabled}
+            setDisabled={setDisabled}
          />
       </header>
    );

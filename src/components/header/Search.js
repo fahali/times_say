@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
-const Search = ({ query, setQuery, setTotalPages }) => {
-   const [disabled, setDisabled] = useState(false);
+const Search = ({ query, setQuery, setTotalPages, disabled, setDisabled }) => {
    const history = useHistory();
 
    const handleSubmit = event => {

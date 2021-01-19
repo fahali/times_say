@@ -22,10 +22,7 @@ const DetailsCard = ({ movie, year }) => {
             <p>{movie.summary_short}</p>
          </Card.Body>
          <Card.Footer className='details-footer'>
-            <a href={movie.link.url}>
-               Read the rest at The New York Times. This will redirect you to
-               The New York Times webpage.
-            </a>
+            <a href={movie.link.url}>Read the rest at The New York Times.</a>
          </Card.Footer>
       </Card>
    );

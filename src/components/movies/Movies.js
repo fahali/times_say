@@ -13,6 +13,7 @@ const Movies = ({ totalPages, setTotalPages }) => {
    const [requestFailed, setRequestFailed] = useState(false);
    const { query, page } = useParams();
 
+   // TODO rework parameter name to match inner function call parameter
    const fetchMovies = async (search, offset) => {
       try {
          const url = APIHelper.nyt_searchURL(search, offset);
