@@ -1,6 +1,7 @@
 :root {
    --cornflower: #89c2ff;
    --dark-grey: #212529;
+   --disabled: #666;
 }
 
 body {

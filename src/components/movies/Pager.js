@@ -137,7 +137,7 @@ const Pager = ({ hasMore, query, page, totalPages }) => {
          : upTo11(items, page, totalPages);
    };
 
-   return <Pagination size='lg'>{generatePages()}</Pagination>;
+   return <Pagination>{generatePages()}</Pagination>;
 };
 
 export default Pager;

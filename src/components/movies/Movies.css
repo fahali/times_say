@@ -9,7 +9,7 @@
 }
 
 .pagination {
-   font-family: 'Inconsolata', sans-serif;
+   font-family: 'nyt-franklin', sans-serif;
    margin: 1rem 0;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .page-item.disabled .page-link {
-   background-color: #666;
+   background-color: var(--disabled);
    border-color: #000;
 }
 
@@ -78,6 +78,28 @@
 
 .movie-header small {
    font-family: 'nyt-franklin', sans-serif;
+}
+
+.modal-content {
+   background-color: var(--dark);
+   color: #fff;
+   border-color: #000;
+   padding: 2rem 3rem;
+   box-shadow: 0 0 12px 12px #000;
+}
+
+.modal-title {
+   font-family: 'nyt-cheltenham', serif;
+   font-size: 2.4rem;
+}
+
+.modal-body {
+   font-family: 'nyt-imperial', serif;
+   font-size: 1.6rem;
+}
+
+.modal-footer .btn-primary {
+   font-size: 1.2rem;
 }
 
 .details-card {

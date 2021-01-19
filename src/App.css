@@ -19,3 +19,19 @@ a:hover {
 a:active {
    text-shadow: 0 0 1px var(--cornflower);
 }
+
+input,
+button {
+   font-family: 'nyt-franklin', sans-serif;
+}
+
+.btn-primary {
+   color: var(--dark-grey);
+   background-color: var(--cornflower);
+   border-color: var(--cornflower);
+}
+
+.btn-primary:disabled {
+   background-color: var(--disabled);
+   border-color: var(--disabled);
+}
