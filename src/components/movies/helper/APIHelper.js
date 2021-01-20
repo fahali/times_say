@@ -37,11 +37,11 @@ class APIHelper {
    static tmdb_init = { headers: { Authorization: `Bearer ${this.tmdb_key}` } };
    static tmdb_base = 'https://api.themoviedb.org/3';
    static tmdb_config = '/configuration';
-   static tmdb_searchMovie = '/search/movie/?';
+   static tmdb_searchMovie = '/search/movie?';
 
    /* TMDB PARAMS */
    static tmdb_posterSize = 'original';
-   static tmdb_year = 'year=';
+   static tmdb_yearParam = 'year=';
 
    /* TMDB END POINTS */
    static tmdb_configEP = this.tmdb_base + this.tmdb_config;
@@ -59,7 +59,7 @@ class APIHelper {
             this.queryParam +
             query +
             this.and +
-            this.tmdb_year +
+            this.tmdb_yearParam +
             year,
          this.tmdb_init
       );
