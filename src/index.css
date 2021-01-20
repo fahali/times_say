@@ -1,11 +1,14 @@
 :root {
-   --cornflower: #89c2ff;
+   --blue-suede: #3960a1;
+   --body-bg: #282c34;
+   --chiffon: #acf2ef;
    --dark-grey: #212529;
    --disabled: #666;
+   --oats: #dacea4;
 }
 
 body {
-   background-color: #282c34;
+   background-color: var(--body-bg);
    color: #fff;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;

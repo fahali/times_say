@@ -6,7 +6,7 @@ const DetailsCard = ({ movie, year }) => {
       rating && rating !== 'Not Rated' ? `Rated ${rating}` : 'Not Rated';
 
    return (
-      <Card bg='dark' className='details-card'>
+      <Card className='details-card'>
          <Card.Header className='details-header'>
             <h1>{movie.display_title}</h1>
             <div className='details-subheader'>

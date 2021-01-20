@@ -10,10 +10,13 @@ const Search = ({ query, setQuery, setTotalPages, disabled, setDisabled }) => {
    const handleSubmit = event => {
       event.preventDefault();
       setDisabled(true);
+      // TODO don't reset pages if the location is the same as the url we're
+      // trying to set
       setTotalPages(0);
       // empty query returns all reviews sorted in order of recency
       // set this explicitly for our URL and handle when fetching
-      history.push(`/movies/${query === '' ? 'recent' : query}/1`);
+      history.push(`/movies/${query.trim() === '' ? 'recent' : query}/1`);
+      setQuery('');
    };
 
    const handleChange = event => {

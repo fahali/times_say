@@ -11,10 +11,10 @@ header h1 {
 }
 
 header h1:hover {
-   color: var(--cornflower);
+   color: var(--chiffon);
    cursor: pointer;
 }
 
 header h1:active {
-   text-shadow: 0 0 2px var(--cornflower);
+   text-shadow: 0 0 2px var(--chiffon);
 }

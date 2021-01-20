@@ -13,11 +13,11 @@ a {
 }
 
 a:hover {
-   color: var(--cornflower);
+   color: var(--chiffon);
 }
 
 a:active {
-   text-shadow: 0 0 1px var(--cornflower);
+   text-shadow: 0 0 1px var(--chiffon);
 }
 
 input,
@@ -26,12 +26,12 @@ button {
 }
 
 .btn-primary {
-   color: var(--dark-grey);
-   background-color: var(--cornflower);
-   border-color: var(--cornflower);
+   background-color: var(--blue-suede);
+   border-color: var(--blue-suede);
 }
 
 .btn-primary:disabled {
+   color: var(--oats);
    background-color: var(--disabled);
    border-color: var(--disabled);
 }

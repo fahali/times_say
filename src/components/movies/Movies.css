@@ -14,20 +14,26 @@
 }
 
 .page-link {
-   color: #fff;
-   background-color: var(--dark);
+   color: var(--oats);
+   background-color: var(--dark-grey);
    border-color: #000;
 }
 
-.page-link:hover,
+.page-link:hover {
+   color: #000;
+   background-color: var(--chiffon);
+   border-color: var(--chiffon);
+}
+
 .page-item.active .page-link,
 .page-item.disabled .page-link {
-   color: var(--dark-grey);
+   color: var(--oats);
 }
 
 .page-item.active .page-link {
-   background-color: var(--cornflower);
-   border-color: var(--cornflower);
+   color: #fff;
+   background-color: var(--blue-suede);
+   border-color: var(--blue-suede);
 }
 
 .page-item.disabled .page-link {
@@ -42,6 +48,7 @@
 }
 
 .movie-card {
+   background-color: var(--blue-suede);
    width: 212px;
    margin: 1rem;
    border-color: #000;
@@ -49,17 +56,17 @@
 }
 
 .movie-card:hover {
-   box-shadow: 0 0 3px 3px var(--cornflower);
+   box-shadow: 0 0 3px 3px var(--chiffon);
    cursor: pointer;
 }
 
 @keyframes pop {
    from {
-      box-shadow: 0 0 3px 3px var(--cornflower);
+      box-shadow: 0 0 3px 3px var(--chiffon);
    }
 
    50% {
-      box-shadow: 0 0 6px 6px var(--primary);
+      box-shadow: 0 0 6px 6px var(--oats);
    }
 
    to {
@@ -109,6 +116,10 @@
    box-shadow: 0 0 6px 6px #000;
 }
 
+.details-card {
+   background-color: var(--dark-grey);
+}
+
 .details-header {
    display: flex;
    justify-content: space-between;
@@ -116,6 +127,7 @@
 }
 
 .details-header h1 {
+   color: var(--oats);
    font-size: 2.4rem;
    margin: 0;
 }
@@ -125,20 +137,24 @@
 }
 
 .details-subheader p {
+   color: var(--oats);
    font-family: 'nyt-franklin', sans-serif;
    margin: 0;
    text-align: right;
 }
 
 .details-body .card-title {
+   color: var(--oats);
    font-size: 1.6rem;
 }
 
 .details-body .card-subtitle {
+   color: var(--oats);
    font-size: 1.2rem;
 }
 
 .details-body p {
+   color: var(--oats);
    font-size: 1.2rem;
    margin-top: 4rem;
 }

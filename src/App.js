@@ -36,6 +36,10 @@ const App = () => {
                   path='/movie/:key'
                   render={() => <MovieDetails movie={movie} />}
                />
+               <Route
+                  path='/movie'
+                  render={() => <Redirect to='/movies/recent/1' />}
+               />
             </Switch>
          </main>
       </div>
