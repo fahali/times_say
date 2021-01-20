@@ -16,6 +16,8 @@ Once again project management is handled with [Trello](https://trello.com/b/TrNx
 
 The New York Times is an old newspaper and has articles from before World War 2, right in the nascent era of movies and filmmaking. I knew early on I would need to paginate the dataset to provide a good UX. Unfortunately the API does not expose the size of the total dataset, which would simplify generating the total page count from the first fetch request. Instead there is a `has_more` property which indicates there are more articles to retrieve. I settled on dynamically generating pages. The **next** button is always visible but it is only enabled when the `has_more` property is true. As you build out pages, previous page numbers are retained with state variables. It took me several different approaches before using a combination of the `useHistory` and `useParams` hooks that `react-router-dom` exposes. I'm not using `Link`s at all! By transferring search queries and page numbers via the URL, the Movies component becomes more self-sufficient.
 
+I discovered how important it is to double check that your endpoints are correct. Due to one erroneous forward slash at the end of one of my endpoints, the API was redirecting to an unsecure `http` version of the resource, which would be met with a `Blocked mixed active content` error on modern browsers, because the app was loaded in secure `https` mode. I found myself going down a rabbit hole trying to track down the bug, but after some careful observation of the network requests console in the developer tools, I was able to connect the dots as to why the `http` redirect was happening: the API was parsing MY incorrect version of the endpoint (as an `https` endpoint) and returning the correct version of the endpoint (lacking the trailing forward slash) but as an `http` redirect. After correcting the bug in my code, the API simply responds with the requested resources, instead of redirecting first to the unsecure `http` version of the resource.
+
 ## Timeframe
 
 | Task                                       | Priority | Estimated Time | Time Invested | Actual Time |
@@ -29,10 +31,10 @@ The New York Times is an old newspaper and has articles from before World War 2,
 | Pagination                                 | M        | 4 hrs          | 14 hrs        | 14 hrs      |
 | Bug fixes                                  | M        | 8 hrs          | 4 hrs         | 4 hrs       |
 | Critics picks                              | M        | 4 hrs          | X hrs         | X hrs       |
-| Movie poster API                           | M        | 8 hrs          | X hrs         | X hrs       |
+| Movie poster API                           | M        | 8 hrs          | 8 hrs         | 8 hrs       |
 | Granular search options                    | M        | 8 hrs          | X hrs         | X hrs       |
 | NYT Books API                              | L        | 12 hrs         | X hrs         | X hrs       |
-| Total                                      | X        | 56 hrs         | 35 hrs        | 35 hrs      |
+| Total                                      | X        | 56 hrs         | 43 hrs        | 43 hrs      |
 
 ## Project Schedule
 
@@ -62,7 +64,7 @@ The New York Times is an old newspaper and has articles from before World War 2,
 
 ### Stretch Goals
 
--  [ ] Integrate a movie poster API to fetch high quality artwork to go with the review blurbs and generate visual interest
+-  [x] Integrate a movie poster API to fetch high quality artwork to go with the review blurbs and generate visual interest
 -  [ ] Render critics picks: a list of favorites curated by NYT staff
 -  [ ] Allow granular search options like release year and review author
 -  [ ] Integrate NYT Books API for book reviews
