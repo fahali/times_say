@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import APIHelper from './helper/APIHelper';
 
-const MoviePoster = ({ query, year }) => {
+const MoviePoster = ({ query, year, setFoundPoster }) => {
    const [source, setSource] = useState('');
 
    const searchMovie = async (query, year) => {
@@ -16,8 +16,6 @@ const MoviePoster = ({ query, year }) => {
    };
 
    const fetchPosterURL = async movie => {
-      if (movie === undefined) return;
-
       const getConfig = async () => {
          const request = APIHelper.tmdb_configRequest();
          const response = await fetch(request);
@@ -35,10 +33,16 @@ const MoviePoster = ({ query, year }) => {
    };
 
    useEffect(() => {
-      searchMovie(query, year).then(movie =>
-         fetchPosterURL(movie).then(src => setSource(src))
-      );
-   }, [query, year]);
+      searchMovie(query, year).then(movie => {
+         if (movie === undefined) {
+            setFoundPoster(false);
+            return;
+         }
+         setFoundPoster(true);
+
+         fetchPosterURL(movie).then(src => setSource(src));
+      });
+   }, [query, year, setFoundPoster]);
 
    return (
       <Card bg='dark' className='poster-card'>

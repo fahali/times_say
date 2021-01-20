@@ -7,16 +7,17 @@ import Pager from './Pager';
 import ErrorModal from './ErrorModal';
 import APIHelper from './helper/APIHelper';
 
+// TODO why does modal only render on first error?
+// TODO findDOMNode is deprecated in Strict Mode. react-bootstrap issue
 const Movies = ({ totalPages, setTotalPages }) => {
    const [movies, setMovies] = useState([]);
    const [hasMore, setHasMore] = useState(false);
    const [requestFailed, setRequestFailed] = useState(false);
    const { query, page } = useParams();
 
-   // TODO rework parameter name to match inner function call parameter
-   const fetchMovies = async (search, offset) => {
+   const fetchMovies = async (query, offset) => {
       try {
-         const url = APIHelper.nyt_searchURL(search, offset);
+         const url = APIHelper.nyt_searchURL(query, offset);
          const response = await fetch(url);
 
          if (response.status === 200) {
@@ -72,7 +73,6 @@ const Movies = ({ totalPages, setTotalPages }) => {
             page={page}
             totalPages={totalPages}
          />
-         {/* TODO explore React.createRef() to mitigate findDOMNode msgs */}
          {requestFailed && <ErrorModal visible={requestFailed} />}
       </div>
    );
