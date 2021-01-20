@@ -19,6 +19,10 @@ const Header = ({ setTotalPages }) => {
 
    return (
       <header>
+         <nav>
+            <h5 onClick={handleClick}>HOME</h5>
+            <h5 onClick={() => history.push('/about')}>ABOUT</h5>
+         </nav>
          <h1 onClick={handleClick}>What does the Times say?</h1>
          <Search
             query={query}

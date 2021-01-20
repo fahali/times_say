@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import MovieContext from './components/movies/MovieContext';
+import About from './components/header/About';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
 import MovieDetails from './components/movies/MovieDetails';
@@ -40,6 +41,7 @@ const App = () => {
                   path='/movie'
                   render={() => <Redirect to='/movies/recent/1' />}
                />
+               <Route path='/about' component={About} />
             </Switch>
          </main>
       </div>
