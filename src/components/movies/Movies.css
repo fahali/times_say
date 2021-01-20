@@ -20,7 +20,7 @@
 }
 
 .page-link:hover {
-   color: #000;
+   color: var(--dark-grey);
    background-color: var(--chiffon);
    border-color: var(--chiffon);
 }
@@ -160,5 +160,10 @@
 }
 
 .details-footer a {
+   color: var(--oats);
    font-family: 'nyt-franklin', sans-serif;
+}
+
+.details-footer a:active {
+   text-shadow: 0 0 1px var(--oats);
 }
