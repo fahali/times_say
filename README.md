@@ -1,14 +1,21 @@
+[![title banner](https://i.imgur.com/lvOUU89.png)](https://timessay.herokuapp.com/)
+
 # Times Say
 
-What does the Times say? This app retrieves movie reviews from the New York Times archives. The NYT Movie Reviews API is available here: https://developer.nytimes.com/docs/movie-reviews-api/1/overview
+What does the Times say? This app retrieves movie reviews from The New York Times archives via [The NYT Movie Reviews API](https://developer.nytimes.com/docs/movie-reviews-api/1/overview). Movie posters are retrieved from [The Movie Database](https://www.themoviedb.org/).
 
-The live site is hosted by Heroku:
+If the screenshots don't work, the live site can be reached on Heroku:
 
 -  https://timessay.herokuapp.com/
 
+## Screenshots
+
+[![recent reviews](https://i.imgur.com/Ok4eXr8.png)](https://timessay.herokuapp.com/)
+[![soul review](https://i.imgur.com/DyVaxSC.png)](https://timessay.herokuapp.com/)
+
 ## Technologies Used
 
-The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project is hosted by Heroku.
+The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project is hosted by Heroku. I also used React Bootstrap quite a bit to achieve a nice consistent look.
 
 Once again project management is handled with [Trello](https://trello.com/b/TrNxWlVZ/times-say).
 
