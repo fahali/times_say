@@ -1,4 +1,6 @@
 import './App.css';
+import './components/header/Header.css';
+import './components/movies/Movies.css';
 
 import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';

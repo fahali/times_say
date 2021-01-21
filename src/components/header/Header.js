@@ -1,5 +1,3 @@
-import './Header.css';
-
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Search from './Search';
