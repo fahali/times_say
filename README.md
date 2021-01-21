@@ -4,10 +4,6 @@
 
 What does the Times say? This app retrieves movie reviews from The New York Times archives via [The NYT Movie Reviews API](https://developer.nytimes.com/docs/movie-reviews-api/1/overview). Movie posters are retrieved from [The Movie Database](https://www.themoviedb.org/).
 
-If the screenshots don't work, the live site can be reached on Heroku:
-
--  https://timessay.herokuapp.com/
-
 ## Screenshots
 
 [![recent reviews](https://i.imgur.com/Ok4eXr8.png)](https://timessay.herokuapp.com/)
@@ -15,9 +11,36 @@ If the screenshots don't work, the live site can be reached on Heroku:
 
 ## Technologies Used
 
-The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library and other Javascript packages from the vast `npm` repository. The project is hosted by Heroku. I also used React Bootstrap quite a bit to achieve a nice consistent look.
+The goal is to create a **S**ingle **P**age **A**pplication (**SPA**) using the React library. I used `react-bootstrap` quite heavily to achieve a nice consistent look. Date formatting is provided by `moment`. The project is hosted by Heroku.
 
 Once again project management is handled with [Trello](https://trello.com/b/TrNxWlVZ/times-say).
+
+## Getting Started
+
+Fork and clone this repository to your development environment. Dependencies are managed by `yarn`, so that is a pre-requisite.
+
+```
+// git clone using your preferred method
+cd times_say
+npm i
+yarn start
+```
+
+## Contribution Guidelines
+
+-  Currently, the `/movie/:key` Route, which renders the `MovieDetails` component, is not self-sufficient. If the user bookmarks this URL and returns after closing the browser, they will be greeted by a blank page. The NYT API does not expose a unique key property for movie reviews, which was one of the bane's of this project. I have yet to find an effective solution that can positively ID a specific review, and make the `MovieDetails` component self-sufficient.
+
+-  The response code `429 - Too many requests`, is detected (and logged automatically by browsers) when the user is requesting an unreasonable number of reviews in a short amount of time. I show an error modal dialog that 'times you out' for 10 seconds, but this is not 100% effective. This area could use more work overall.
+
+-  Something related to the way React Bootstrap is rendering the Modal dialog is unfriendly to `StrictMode` and you will get an error in the console stating that `findDOMNode is deprecated`. I believe this issue may resolve itself when `react-bootstrap` is updated.
+
+-  I couldn't figure out a good use for the ellipses `...` page indicators, so currently they are disabled.
+
+-  Fonts were 'borrowed' from the NYT CDN. So far in Firefox I have observed font spacing issues that Firefox corrects and logs. This does not happen in Chrome.
+
+-  Some reviews have their body text in HTML entity encoded format. This is probably low hanging  fruit.
+
+-  I would like to continue improving this project by adding granular search options, some sort of loading indication or animation to smooth out the UX, and eventually integrate the NYT Book Reviews API.
 
 ## Interesting Challenges
 
