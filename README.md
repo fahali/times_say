@@ -29,12 +29,12 @@ I discovered how important it is to double check that your endpoints are correct
 | Routing                                    | M        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Advanced styling                           | M        | 4 hrs          | 4 hrs         | 4 hrs       |
 | Pagination                                 | M        | 4 hrs          | 14 hrs        | 14 hrs      |
-| Bug fixes                                  | M        | 8 hrs          | 4 hrs         | 4 hrs       |
+| Bug fixes                                  | M        | 8 hrs          | 8 hrs         | 8 hrs       |
 | Critics picks                              | M        | 4 hrs          | X hrs         | X hrs       |
 | Movie poster API                           | M        | 8 hrs          | 8 hrs         | 8 hrs       |
 | Granular search options                    | M        | 8 hrs          | X hrs         | X hrs       |
 | NYT Books API                              | L        | 12 hrs         | X hrs         | X hrs       |
-| Total                                      | X        | 56 hrs         | 43 hrs        | 43 hrs      |
+| Total                                      | X        | 56 hrs         | 47 hrs        | 47 hrs      |
 
 ## Project Schedule
 
@@ -46,7 +46,7 @@ I discovered how important it is to double check that your endpoints are correct
 | Jan 16      | Critics picks / Movie poster API        | in progress |
 | Jan 17      | Granular search options                 | incomplete  |
 | Jan 18      | NYT Books API                           | incomplete  |
-| Jan 19 - 20 | Polishing up                            | incomplete  |
+| Jan 19 - 20 | Polishing up                            | complete    |
 | Jan 21      | Presentations                           |
 
 ## User Stories

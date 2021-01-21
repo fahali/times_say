@@ -2,10 +2,10 @@ import './App.css';
 
 import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import MovieContext from './components/movies/MovieContext';
 import About from './components/header/About';
 import Header from './components/header/Header';
 import Movies from './components/movies/Movies';
+import MovieContext from './components/movies/MovieContext';
 import MovieDetails from './components/movies/MovieDetails';
 
 const App = () => {
