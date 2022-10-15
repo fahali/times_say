@@ -1,4 +1,8 @@
-[![title banner](https://i.imgur.com/lvOUU89.png)](https://timessay.herokuapp.com/)
+![title banner](https://i.imgur.com/lvOUU89.png)
+
+## Times Say will be unavailable until further notice.
+
+Times Say was a project for me to learn the React framework during my tenure at General Assembly. Part of the learning process was deploying a React app to Heroku. With recent policy changes, Heroku is discontinuing their free dynos. Unfortunately, I do not have the time to research and host with another free provider at this time. Perhaps I will re-deploy Times Say at a future time. Thank you for visiting!
 
 # Times Say
 
@@ -6,8 +10,8 @@ What does the Times say? This app retrieves movie reviews from The New York Time
 
 ## Screenshots
 
-[![recent reviews](https://i.imgur.com/Ok4eXr8.png)](https://timessay.herokuapp.com/)
-[![soul review](https://i.imgur.com/DyVaxSC.png)](https://timessay.herokuapp.com/)
+![recent reviews](https://i.imgur.com/Ok4eXr8.png)
+![soul review](https://i.imgur.com/DyVaxSC.png)
 
 ## Technologies Used
 
